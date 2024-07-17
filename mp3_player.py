@@ -21,7 +21,7 @@ class AudioPlayer:
         while self.is_playing:
             if not pygame.mixer.music.get_busy():
                 pygame.mixer.music.play(-1)
-            pygame.time.wait(100)  # Check more frequently
+            pygame.time.wait(30000)  # Check more frequently
 
     def start(self):
         self.play_thread = threading.Thread(target=self.play_audio)
